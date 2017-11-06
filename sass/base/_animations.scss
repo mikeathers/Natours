@@ -1,0 +1,48 @@
+/*Only ever animate opacity and transform properties, this is what browsers are optimized for*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); /*Left to right*/
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); /*Put the element back to its default state*/
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); /*Right to left*/
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); /*Put the element back to its default state*/
+  }
+}
+
+@keyframes moveInBottom{
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); /*Right to left*/
+  }
+
+  // 80% {
+  //   transform: translateY(-1rem);
+  // }
+
+  100% {
+    opacity: 1;
+    transform: translate(0); /*Put the element back to its default state*/
+  }
+}

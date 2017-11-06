@@ -1,0 +1,16 @@
+/* Universal Selector to normailize */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*All elements will inherit box-sizing from the body*/
+}
+
+html {
+  font-size: 10px; // Defines what 1rem is.
+}
+
+body {
+  box-sizing: border-box; /*Changes box model so border and padding is not added to overall height or width*/
+}

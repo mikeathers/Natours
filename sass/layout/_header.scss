@@ -1,0 +1,42 @@
+.header {
+  /*95% of view port*/
+  height: 95vh; 
+
+  /*Adds a gradient taking 2 colours, changing from top left to bottom right and then the background image underneath*/
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba($color-primary-light, 0.80), 
+    rgba($color-primary-dark, 0.80)), 
+    url("../img/hero.jpg"); 
+  background-size: cover; /*Try to fir the element inside of the viewport box*/
+  background-position: top; /*Keep element at the top of the view port container as the image changes*/
+  position: relative; /*Origin for child elements with position: absolute;*/
+
+  /*Specify x and y to create a shape*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+    /*Width will scale automatically*/
+  }
+
+  &__text-box {
+    /*Centers the element on the page in relation to the parent element*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /*Transforms the element by 50% in relation to itself, not the parent element*/
+    /*Shifts the element half its width to the left and halfs its height to the top,*/
+    /*this places the center of the element in the center of the page*/
+    transform: translate(-50%, -50%);
+    text-align: center; /*Makes all child (text) elements centered*/
+  }
+}
+
